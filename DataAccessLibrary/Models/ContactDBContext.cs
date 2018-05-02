@@ -7,8 +7,10 @@ namespace DataAccessLibrary.Models
 	public partial class ContactDBContext : DbContext
 	{
 		private DbSet<Contacts> _contacts;
+		private DbSet<Employees> _employees;
 
 		public virtual DbSet<Contacts> Contacts { get => _contacts; set => _contacts = value; }
+		public virtual DbSet<Employees> Employees { get => _employees; set => _employees = value; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
@@ -42,6 +44,12 @@ namespace DataAccessLibrary.Models
 					.IsUnicode(false);
 
 				entity.Property(e => e.Active);
+			});
+
+			modelBuilder.Entity<Employees>(entity =>
+			{
+				entity.ToTable("Employees2");
+				entity.HasKey(e => e.Code);
 			});
 		}
 	}

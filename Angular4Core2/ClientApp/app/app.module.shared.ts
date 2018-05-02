@@ -14,9 +14,12 @@ import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LocationComponent } from './components/location/location.component';
+import { EmployeeComponent } from './components/employee/employee.component';
+
 
 import { ContactService } from './_services/index';
 import { LocationService } from './_services/index';
+import { EmployeeService } from './_services/index';
 
 
 class AppBaseRequestOptions extends BaseRequestOptions {
@@ -33,9 +36,10 @@ class AppBaseRequestOptions extends BaseRequestOptions {
         AppComponent,
         NavMenuComponent,
         ContactComponent,
-        LocationComponent
+        LocationComponent,
+        EmployeeComponent
     ],
-    providers: [ContactService,LocationService,
+    providers: [ContactService, LocationService, EmployeeService,
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         { provide: RequestOptions, useClass: AppBaseRequestOptions }],
     imports: [
@@ -49,6 +53,7 @@ class AppBaseRequestOptions extends BaseRequestOptions {
             { path: '', redirectTo: 'contact', pathMatch: 'full' },
             { path: 'contact', component: ContactComponent },
             { path: 'location', component: LocationComponent },
+            { path: 'employee', component: EmployeeComponent },
             { path: '**', redirectTo: 'contact' }
         ])
     ]

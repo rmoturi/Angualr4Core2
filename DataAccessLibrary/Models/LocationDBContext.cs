@@ -46,6 +46,8 @@ namespace DataAccessLibrary.Models
 			{
 				entity.ToTable("HRDW_ERPEmployers");
 			});
+
+			
 		}
 	}
 }

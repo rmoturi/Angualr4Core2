@@ -59,5 +59,7 @@ namespace Angular4Core2.Controllers
 			return Json(new { result = data });
 		}
 
+		
+
 	}
 }
