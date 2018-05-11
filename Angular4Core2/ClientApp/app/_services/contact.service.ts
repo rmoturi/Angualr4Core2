@@ -1,6 +1,7 @@
 ﻿import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Contact } from '../_models/index';
+import { ValidationService } from '../_services/index';
 import { Observable } from 'rxjs/Observable';
 import "rxjs/Rx";
 
@@ -31,6 +32,7 @@ export class ContactService {
         return this.http.post(this._saveUrl, body, options)
             .map(res => res.json().message)
             .catch(this.handleError);
+            //.catch (e => this.validationService.handleError(e));
     }
 
     //Delete

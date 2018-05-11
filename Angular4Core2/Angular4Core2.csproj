@@ -26,11 +26,13 @@
     <None Remove="ClientApp\app\components\contact\contact.component.ts" />
     <None Remove="ClientApp\app\components\employee\employee.component.ts" />
     <None Remove="ClientApp\app\components\location\location.component.ts" />
+    <None Remove="ClientApp\app\directives\handleValidation.directive.ts" />
     <None Remove="ClientApp\app\_models\employee.ts" />
     <None Remove="ClientApp\app\_models\employer.ts" />
     <None Remove="ClientApp\app\_models\location.ts" />
     <None Remove="ClientApp\app\_services\employee.service.ts" />
     <None Remove="ClientApp\app\_services\location.service.ts" />
+    <None Remove="ClientApp\app\_services\validation.service.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -79,11 +81,13 @@
     <TypeScriptCompile Include="ClientApp\app\components\contact\contact.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\employee\employee.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\location\location.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\directives\handleValidation.directive.ts" />
     <TypeScriptCompile Include="ClientApp\app\_models\employee.ts" />
     <TypeScriptCompile Include="ClientApp\app\_models\employer.ts" />
     <TypeScriptCompile Include="ClientApp\app\_models\location.ts" />
     <TypeScriptCompile Include="ClientApp\app\_services\employee.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\_services\location.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\_services\validation.service.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

@@ -24,7 +24,12 @@ namespace Angular4Core2.Controllers
         [HttpPost, Produces("application/json")]
         public async Task<IActionResult> SaveContact([FromBody] Contact model)
         {
-            return Json(await ContactRepo.SaveContact(model));
+			if (!ModelState.IsValid)
+			{
+				return BadRequest(ModelState);
+			}
+
+			return Json(await ContactRepo.SaveContact(model));
         }
 
         [HttpDelete]

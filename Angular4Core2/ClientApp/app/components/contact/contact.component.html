@@ -39,15 +39,15 @@
                         <!--<p-dropdown [options]="contact" [(ngModel)]="contact" optionLabel="firstname" [style]="{'width':'100px'}"></p-dropdown>-->{{contact.firstName}}
                         <div class="ui-grid-row">
                             <div class="ui-grid-col-4"><label for="firstname">FirstName</label></div>
-                            <div class="ui-grid-col-8"><input pInputText id="firstname" [(ngModel)]="contact.firstName" /></div>
+                            <div class="ui-grid-col-8"><input pInputText id="firstname" [(ngModel)]="contact.firstName" required handleValidation /></div>
                         </div>
                         <div class="ui-grid-row">
                             <div class="ui-grid-col-4"><label for="lastname">LastName</label></div>
-                            <div class="ui-grid-col-8"><input pInputText id="lastname" [(ngModel)]="contact.lastName" /></div>
+                            <div class="ui-grid-col-8"><input pInputText id="lastname" [(ngModel)]="contact.lastName" required handleValidation/></div>
                         </div>
                         <div class="ui-grid-row">
                             <div class="ui-grid-col-4"><label for="email">Email</label></div>
-                            <div class="ui-grid-col-8"><input type="email" pInputText id="email" [(ngModel)]="contact.email" /></div>
+                            <div class="ui-grid-col-8"><input type="email" pInputText id="email" [(ngModel)]="contact.email" required handleValidation/></div>
                         </div>
                         <div class="ui-grid-row">
                             <div class="ui-grid-col-4"><label for="mobile">Phone</label></div>
